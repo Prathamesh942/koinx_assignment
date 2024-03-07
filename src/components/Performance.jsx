@@ -82,12 +82,12 @@ const Performance = ({ coin }) => {
       />
       <Lowhigh low={16930} high={49743} duration={"52W"} />
       <div>
-        <h2 className=" text-lg font-semibold text-zinc-600 flex items-center gap-2">
-          Fundamentals{" "}
+        <h3 className=" text-lg font-semibold text-zinc-600 flex items-center gap-2">
+          Fundamentals
           <span className="bg-slate-400  text-xs rounded-full h-4 w-4 flex items-center justify-center text-white">
             i
           </span>
-        </h2>
+        </h3>
         <div className=" flex justify-between gap-10">
           <div className=" flex flex-col flex-1 justify-between">
             <MarketInfo
