@@ -4,6 +4,7 @@ import Performance from "../components/Performance";
 import Header from "../components/Header";
 import Sentiment from "../components/Sentiment";
 import { events } from "../placeholderData/events";
+import Technicals from "../components/Technicals";
 
 const Cryptocurrency = ({ coin }) => {
   return (
@@ -12,7 +13,8 @@ const Cryptocurrency = ({ coin }) => {
       <div className=" w-screen h-screen bg-[#EFF2F5] px-[3vw]">
         {/* <Chart coin={coin} />
         <Performance coin={coin} /> */}
-        <Sentiment events={events} />
+        {/* <Sentiment events={events} /> */}
+        <Technicals coin={coin} />
       </div>
     </div>
   );
