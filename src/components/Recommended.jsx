@@ -89,7 +89,7 @@ const Recommended = () => {
   if (loading) return <div>Loading</div>;
   console.log(trending);
   return (
-    <div className=" bg-white flex flex-col gap-2">
+    <div className=" bg-white flex flex-col gap-2 p-5">
       <h2 className=" text-xl font-semibold">You may also Like</h2>
       <Carousel coins={trending} />
       <h2 className=" text-xl font-semibold">Trending coins</h2>

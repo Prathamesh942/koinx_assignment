@@ -72,7 +72,7 @@ const Performance = ({ coin }) => {
   }, []);
   if (loading) return <div>Loading</div>;
   return (
-    <div className=" flex flex-col bg-white gap-8 px-[2vw] py-5 rounded-md">
+    <div className=" flex flex-col bg-white gap-8 p-5 rounded-md">
       <h2 className=" text-2xl font-semibold">Performance</h2>
       <Lowhigh
         low={fundamentals.market_data.low_24h.usd}

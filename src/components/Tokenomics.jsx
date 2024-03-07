@@ -2,7 +2,7 @@ import React from "react";
 
 const Tokenomics = () => {
   return (
-    <div className=" flex flex-col gap-5 bg-white">
+    <div className=" flex flex-col gap-5 bg-white p-5">
       <h2 className=" text-2xl font-semibold">Tokenomics</h2>
       <h3 className=" text-xl font-semibold">Initial Distribution</h3>
       <div className=" flex items-center gap-10">

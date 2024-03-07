@@ -42,7 +42,7 @@ const Sentiment = ({ events }) => {
   };
 
   return (
-    <div className=" bg-white flex flex-col gap-5">
+    <div className=" bg-white flex flex-col gap-5 p-5">
       <h2 className=" text-2xl font-semibold">Sentiment</h2>
       <h3 className=" text-lg font-semibold text-zinc-600 flex items-center gap-2">
         Key Events
