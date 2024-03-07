@@ -10,6 +10,7 @@ import Team from "../components/Team";
 import Trending from "../components/Trending";
 import Recommended from "../components/Recommended";
 import Getstarted from "../components/Getstarted";
+import Footer from "../components/Footer";
 
 const Cryptocurrency = ({ coin }) => {
   return (
@@ -24,6 +25,9 @@ const Cryptocurrency = ({ coin }) => {
             <Technicals coin={coin} />
             <Tokenomics />
             <Team />
+            <div className=" sm:hidden">
+              <Recommended />
+            </div>
           </div>
           <div className=" flex-[2]">
             <div className=" flex flex-col sticky top-20 gap-3">
@@ -32,8 +36,8 @@ const Cryptocurrency = ({ coin }) => {
             </div>
           </div>
         </div>
-        <Recommended />
       </div>
+      <Footer />
     </div>
   );
 };
