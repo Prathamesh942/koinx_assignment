@@ -8,6 +8,7 @@ import Technicals from "../components/Technicals";
 import Tokenomics from "../components/Tokenomics";
 import Team from "../components/Team";
 import Trending from "../components/Trending";
+import Recommended from "../components/Recommended";
 
 const Cryptocurrency = ({ coin }) => {
   return (
@@ -20,7 +21,8 @@ const Cryptocurrency = ({ coin }) => {
         {/* <Technicals coin={coin} /> */}
         {/* <Tokenomics /> */}
         {/* <Team /> */}
-        <Trending />
+        {/* <Trending /> */}
+        <Recommended />
       </div>
     </div>
   );
