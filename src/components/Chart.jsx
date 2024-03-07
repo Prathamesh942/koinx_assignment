@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import TradingViewWidget from "./TradingViewWidget";
+import ChangeChip from "./ChangeChip";
 
 const Price = ({ coin }) => {
   const [price, setPrice] = useState();
@@ -74,16 +75,7 @@ const Price = ({ coin }) => {
             })}
           </span>
         </div>
-        <div
-          className={` p-1 px-2 rounded-md flex items-center gap-2 ${
-            price.usd_24h_change > 0
-              ? " bg-emerald-100 text-emerald-600"
-              : "bg-red-100 text-red-600"
-          } `}
-        >
-          <Arrow up={price.usd_24h_change > 0} />
-          {price.usd_24h_change.toFixed(2)}%
-        </div>
+        <ChangeChip change={price.usd_24h_change} />
         <span>(24H)</span>
       </div>
     </div>

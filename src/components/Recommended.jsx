@@ -1,12 +1,14 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import ChangeChip from "./ChangeChip";
 
 const TrendingCard = ({ coin }) => {
   return (
     <div className=" w-[100%] flex flex-col gap-2 border border-zinc-300 p-2 rounded-lg">
-      <div className=" flex gap-1">
+      <div className=" flex gap-2 items-center">
         <img className=" w-[30px]" src={coin.item.large} alt="" />
         <span>{coin.item.symbol}</span>
+        <ChangeChip change={coin.item.data.price_change_percentage_24h.usd} />
       </div>
       <span className=" font-semibold">{coin.item.data.price}</span>
       <img src={coin.item.data.sparkline} alt="" />

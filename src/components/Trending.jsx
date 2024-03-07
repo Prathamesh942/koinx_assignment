@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Arrow } from "../components/Chart";
+import ChangeChip from "./ChangeChip";
 
 const Trending = () => {
   const [trending, setTrending] = useState();
@@ -39,18 +40,9 @@ const Trending = () => {
                   <span>({coin.item.symbol})</span>
                 </span>
               </div>
-              <div
-                className={` p-1 px-2 rounded-md flex items-center gap-2 ${
-                  coin.item.data.price_change_percentage_24h.usd > 0
-                    ? " bg-emerald-100 text-emerald-600"
-                    : "bg-red-100 text-red-600"
-                } `}
-              >
-                <Arrow
-                  up={coin.item.data.price_change_percentage_24h.usd > 0}
-                />
-                {coin.item.data.price_change_percentage_24h.usd.toFixed(2)}%
-              </div>
+              <ChangeChip
+                change={coin.item.data.price_change_percentage_24h.usd}
+              />
             </div>
           );
         })}
