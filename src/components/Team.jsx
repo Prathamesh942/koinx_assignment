@@ -3,7 +3,7 @@ import { team } from "../placeholderData/team";
 
 const TeamCard = ({ name, profileimg, designation, about }) => {
   return (
-    <div className="flex bg-blue-50 p-2 rounded-lg items-center">
+    <div className="flex bg-blue-50 p-3 rounded-lg items-center max-sm:flex-col">
       <div className=" flex flex-col flex-1 justify-center items-center">
         <img
           className=" rounded-xl w-[100px] aspect-square object-cover"

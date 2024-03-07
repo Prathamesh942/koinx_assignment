@@ -30,7 +30,7 @@ const Carousel = ({ coins }) => {
     <div className="  relative flex w-[100%] overflow-hidden  items-center">
       {index == 0 ? null : (
         <button
-          className=" flex justify-center items-center absolute  bg-white top-[50%] translate-y-[-50%] left-10 rounded-full size-10 shadow-2xl z-10"
+          className=" flex  justify-center items-center absolute  bg-white top-[50%] translate-y-[-50%] left-0 translate-x-[-30%] rounded-full size-10 shadow-2xl z-10 "
           onClick={handleLeftClick}
         >
           <img className=" w-[60%]" src="assets\images\left-arrow.svg" alt="" />
@@ -40,7 +40,7 @@ const Carousel = ({ coins }) => {
         console.log(-100 * index);
         return (
           <div
-            className={` w-[25%] min-w-[200px] px-2`}
+            className={` w-[25%] min-w-[250px] px-2 max-sm:min-w-[200px]`}
             style={{ transform: `translateX(${-100 * index}%)` }}
           >
             <TrendingCard coin={coin} />
@@ -49,7 +49,7 @@ const Carousel = ({ coins }) => {
       })}
       {index == n - 1 ? null : (
         <button
-          className=" flex justify-center items-center absolute right-10 bg-white top-[50%] translate-y-[-50%] rounded-full size-10 shadow-2xl z-10"
+          className=" flex justify-center items-center absolute right-0 translate-x-[30%] bg-white top-[50%] translate-y-[-50%] rounded-full size-10 shadow-2xl z-10 "
           onClick={handleRightClick}
         >
           <img
@@ -89,7 +89,7 @@ const Recommended = () => {
   if (loading) return <div>Loading</div>;
   console.log(trending);
   return (
-    <div className=" bg-white flex flex-col gap-2 p-5">
+    <div className=" bg-white flex flex-col gap-5 p-5">
       <h2 className=" text-xl font-semibold">You may also Like</h2>
       <Carousel coins={trending} />
       <h2 className=" text-xl font-semibold">Trending coins</h2>

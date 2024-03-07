@@ -43,7 +43,7 @@ const Technicals = (coin) => {
         designed to have only 21 million BTC ever created, thus making it a
         deflationary currency
       </p>
-      <div className=" flex gap-10">
+      <div className=" flex gap-10 max-sm:flex-col">
         <div className="flex-1 flex p-5 bg-gradient-to-br from-teal-300 to-blue-600 rounded-xl gap-5 items-center">
           <img
             className=" w-[40%] object-cover aspect-square rounded-xl"

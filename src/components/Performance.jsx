@@ -11,7 +11,7 @@ const Lowhigh = ({ low, high, duration, current }) => {
           {low.toLocaleString("en-IN")}
         </span>
       </div>
-      <div className="flex-[5] flex justify-center items-center relative">
+      <div className="flex-[5] flex justify-center items-center relative max-sm:flex-[2]">
         <div className="w-full h-1 bg-gradient-to-r from-red-500 via-yellow-500 to-green-500 rounded-full">
           {current ? (
             <div
@@ -88,7 +88,7 @@ const Performance = ({ coin }) => {
             i
           </span>
         </h3>
-        <div className=" flex justify-between gap-16">
+        <div className=" flex justify-between gap-16 max-sm:flex-col gap-0">
           <div className=" flex flex-col flex-1 justify-between">
             <MarketInfo
               name={"Bitcoin Price"}

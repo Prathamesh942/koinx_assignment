@@ -16,7 +16,7 @@ const Cryptocurrency = ({ coin }) => {
     <div>
       <Header />
       <div className=" w-[100%]  bg-[#EFF2F5] px-[3vw] py-20 flex flex-col gap-16">
-        <div className=" flex gap-5">
+        <div className=" flex gap-5 max-sm:flex-col">
           <div className=" flex-[5] flex flex-col gap-5">
             <Chart coin={coin} />
             <Performance coin={coin} />
