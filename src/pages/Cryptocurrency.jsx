@@ -14,17 +14,25 @@ import Getstarted from "../components/Getstarted";
 const Cryptocurrency = ({ coin }) => {
   return (
     <div>
-      {/* <Header /> */}
-      <div className=" w-screen h-screen bg-[#EFF2F5] px-[3vw]">
-        {/* <Chart coin={coin} />
-        <Performance coin={coin} /> */}
-        {/* <Sentiment events={events} /> */}
-        {/* <Technicals coin={coin} /> */}
-        {/* <Tokenomics /> */}
-        {/* <Team /> */}
-        {/* <Trending /> */}
-        {/* <Recommended /> */}
-        <Getstarted />
+      <Header />
+      <div className=" w-screen  bg-[#EFF2F5] px-[3vw] py-20 flex flex-col">
+        <div className=" flex gap-5">
+          <div className=" flex-[5] flex flex-col ">
+            <Chart coin={coin} />
+            <Performance coin={coin} />
+            <Sentiment events={events} />
+            <Technicals coin={coin} />
+            <Tokenomics />
+            <Team />
+          </div>
+          <div className=" flex-[2]">
+            <div className=" flex flex-col sticky top-20">
+              <Getstarted />
+              <Trending />
+            </div>
+          </div>
+        </div>
+        <Recommended />
       </div>
     </div>
   );

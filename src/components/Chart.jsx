@@ -39,7 +39,7 @@ const Price = ({ coin }) => {
     };
     fetchPrice();
     fetchCoinInfo();
-    const intervalId = setInterval(fetchPrice, 6000000);
+    const intervalId = setInterval(fetchPrice, 60000);
     return () => clearInterval(intervalId);
   }, []);
 

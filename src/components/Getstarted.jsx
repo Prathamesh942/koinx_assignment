@@ -2,7 +2,7 @@ import React from "react";
 
 const Getstarted = () => {
   return (
-    <div className=" w-[100%] rounded-lg bg-[#266BEB] flex flex-col gap-4 text-center px-[10%] py-10 text-white">
+    <div className=" w-[100%] rounded-lg bg-[#266BEB] flex flex-col gap-4 text-center px-[10%] py-10 text-white justify-center items-center">
       <h2 className=" text-2xl font-semibold">
         Get Started with KoinX for FREE
       </h2>
@@ -11,6 +11,7 @@ const Getstarted = () => {
         to be more educated and aware of your tax reports.
       </p>
       <img
+        className=" w-[45%]"
         src="https://www.koinx.com/_next/static/media/CryptoGuide.555c0e7d.svg"
         alt=""
       />
