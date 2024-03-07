@@ -9,6 +9,7 @@ import Tokenomics from "../components/Tokenomics";
 import Team from "../components/Team";
 import Trending from "../components/Trending";
 import Recommended from "../components/Recommended";
+import Getstarted from "../components/Getstarted";
 
 const Cryptocurrency = ({ coin }) => {
   return (
@@ -22,7 +23,8 @@ const Cryptocurrency = ({ coin }) => {
         {/* <Tokenomics /> */}
         {/* <Team /> */}
         {/* <Trending /> */}
-        <Recommended />
+        {/* <Recommended /> */}
+        <Getstarted />
       </div>
     </div>
   );
