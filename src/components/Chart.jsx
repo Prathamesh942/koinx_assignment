@@ -1,7 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import TradingViewWidget from "./TradingViewWidget";
 
-const Chart = ({ coin }) => {
+const Price = ({ coin }) => {
   const [price, setPrice] = useState();
   const [coinInfo, setCoinInfo] = useState();
   const [loading, setLoading] = useState(true);
@@ -46,7 +47,7 @@ const Chart = ({ coin }) => {
   if (error) return <div>{error}</div>;
 
   return (
-    <section className=" w-[100%] flex flex-col p-4 gap-6">
+    <div className=" flex flex-col gap-6">
       <div className=" flex gap-10 items-center">
         <div className=" flex gap-1">
           <img className=" w-8 h-8" src={coinInfo.large} alt="" />
@@ -62,14 +63,12 @@ const Chart = ({ coin }) => {
       <div className=" flex gap-6 items-center">
         <div className=" flex flex-col gap-1">
           <span className=" text-2xl font-semibold">
-            $
             {price.usd.toLocaleString("en-IN", {
               style: "currency",
-              currency: "INR",
+              currency: "USD",
             })}
           </span>
           <span className=" text-sm font-semibold">
-            ₹
             {price.inr.toLocaleString("en-IN", {
               style: "currency",
               currency: "INR",
@@ -88,6 +87,15 @@ const Chart = ({ coin }) => {
         </div>
         <span>(24H)</span>
       </div>
+    </div>
+  );
+};
+
+const Chart = ({ coin }) => {
+  return (
+    <section className=" flex flex-col p-4 gap-6 bg-white rounded-md aspect-[5/3]">
+      <Price coin={coin} />
+      <TradingViewWidget />
     </section>
   );
 };
