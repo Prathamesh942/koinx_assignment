@@ -2,7 +2,6 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 
 const Lowhigh = ({ low, high, duration, current }) => {
-  console.log(Math.trunc(((current - low) * 100) / (high - low)));
   return (
     <div className=" flex justify-between items-center text-gray-600 text-sm">
       <div className="flex flex-[1] flex-col items-start">
@@ -88,7 +87,7 @@ const Performance = ({ coin }) => {
             i
           </span>
         </h3>
-        <div className=" flex justify-between gap-16 max-sm:flex-col gap-0">
+        <div className=" flex justify-between gap-16 max-sm:flex-col max-sm:gap-0">
           <div className=" flex flex-col flex-1 justify-between">
             <MarketInfo
               name={"Bitcoin Price"}

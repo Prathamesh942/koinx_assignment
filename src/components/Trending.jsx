@@ -24,15 +24,14 @@ const Trending = () => {
     fetchTrending();
   }, []);
   if (loading) return <div>Loading</div>;
-  console.log(trending);
+
   return (
     <div className=" bg-white flex flex-col gap-2 p-5  rounded-lg">
       <h2 className=" text-2xl font-semibold">Trending Coins (24h)</h2>
       <div className=" flex flex-col gap-2">
-        {trending.slice(0, 3).map((coin) => {
-          console.log("coin", coin);
+        {trending.slice(0, 3).map((coin, index) => {
           return (
-            <div className=" flex justify-between">
+            <div className=" flex justify-between" key={index}>
               <div className=" flex gap-2 items-center">
                 <img className=" size-10" src={coin.item.large} alt="" />
                 <span>

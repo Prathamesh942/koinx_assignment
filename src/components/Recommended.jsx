@@ -17,7 +17,6 @@ const TrendingCard = ({ coin }) => {
 const Carousel = ({ coins }) => {
   const [index, setIndex] = useState(0);
   let n = coins.length;
-  console.log("n", n);
 
   const handleLeftClick = () => {
     setIndex(index - 1);
@@ -37,7 +36,6 @@ const Carousel = ({ coins }) => {
         </button>
       )}
       {coins.map((coin) => {
-        console.log(-100 * index);
         return (
           <div
             className={` w-[25%] min-w-[250px] px-2 max-sm:min-w-[200px]`}
@@ -87,7 +85,6 @@ const Recommended = () => {
     fetchTrending();
   }, []);
   if (loading) return <div>Loading</div>;
-  console.log(trending);
   return (
     <div className=" bg-white flex flex-col gap-5 p-5">
       <h2 className=" text-xl font-semibold">You may also Like</h2>

@@ -17,7 +17,6 @@ const Price = ({ coin }) => {
           { headers: { "x-cg-demo-api-key": import.meta.env.VITE_API_KEY } }
         );
         setCoinInfo(response.data.coins[0]);
-        console.log(response.data.coins[0]);
         setLoading(false);
       } catch (error) {
         setLoading(false);
