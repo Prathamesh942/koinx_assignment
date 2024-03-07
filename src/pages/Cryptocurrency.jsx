@@ -5,6 +5,7 @@ import Header from "../components/Header";
 import Sentiment from "../components/Sentiment";
 import { events } from "../placeholderData/events";
 import Technicals from "../components/Technicals";
+import Tokenomics from "../components/Tokenomics";
 
 const Cryptocurrency = ({ coin }) => {
   return (
@@ -14,7 +15,8 @@ const Cryptocurrency = ({ coin }) => {
         {/* <Chart coin={coin} />
         <Performance coin={coin} /> */}
         {/* <Sentiment events={events} /> */}
-        <Technicals coin={coin} />
+        {/* <Technicals coin={coin} /> */}
+        <Tokenomics />
       </div>
     </div>
   );
