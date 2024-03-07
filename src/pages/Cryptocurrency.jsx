@@ -7,6 +7,7 @@ import { events } from "../placeholderData/events";
 import Technicals from "../components/Technicals";
 import Tokenomics from "../components/Tokenomics";
 import Team from "../components/Team";
+import Trending from "../components/Trending";
 
 const Cryptocurrency = ({ coin }) => {
   return (
@@ -18,7 +19,8 @@ const Cryptocurrency = ({ coin }) => {
         {/* <Sentiment events={events} /> */}
         {/* <Technicals coin={coin} /> */}
         {/* <Tokenomics /> */}
-        <Team />
+        {/* <Team /> */}
+        <Trending />
       </div>
     </div>
   );

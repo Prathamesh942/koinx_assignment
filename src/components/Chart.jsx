@@ -100,7 +100,7 @@ const Chart = ({ coin }) => {
   );
 };
 
-const Arrow = ({ up }) => {
+export const Arrow = ({ up }) => {
   if (up) {
     return (
       <svg
