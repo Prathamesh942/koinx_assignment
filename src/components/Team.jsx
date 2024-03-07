@@ -20,7 +20,7 @@ const TeamCard = ({ name, profileimg, designation, about }) => {
 
 const Team = () => {
   return (
-    <div className=" flex flex-col gap-5 bg-white p-5">
+    <div className=" flex flex-col gap-5 bg-white p-5  rounded-lg">
       <h2 className=" text-2xl font-semibold">Team</h2>
       <span>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. A consequatur

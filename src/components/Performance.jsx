@@ -72,7 +72,7 @@ const Performance = ({ coin }) => {
   }, []);
   if (loading) return <div>Loading</div>;
   return (
-    <div className=" flex flex-col bg-white gap-8 p-5 rounded-md">
+    <div className=" flex flex-col bg-white gap-8 p-5 rounded-lg">
       <h2 className=" text-2xl font-semibold">Performance</h2>
       <Lowhigh
         low={fundamentals.market_data.low_24h.usd}
@@ -88,7 +88,7 @@ const Performance = ({ coin }) => {
             i
           </span>
         </h3>
-        <div className=" flex justify-between gap-10">
+        <div className=" flex justify-between gap-16">
           <div className=" flex flex-col flex-1 justify-between">
             <MarketInfo
               name={"Bitcoin Price"}

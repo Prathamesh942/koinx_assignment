@@ -42,7 +42,7 @@ const Sentiment = ({ events }) => {
   };
 
   return (
-    <div className=" bg-white flex flex-col gap-5 p-5">
+    <div className=" bg-white flex flex-col gap-5 p-5  rounded-lg">
       <h2 className=" text-2xl font-semibold">Sentiment</h2>
       <h3 className=" text-lg font-semibold text-zinc-600 flex items-center gap-2">
         Key Events
@@ -113,7 +113,7 @@ const Sentiment = ({ events }) => {
           </div>
           <div className=" flex items-center gap-3">
             <span>Hold</span>
-            <EstimateLine percentage={8} color={"rgb(113,113,122)"} />
+            <EstimateLine percentage={8} color={"rgb(199,200,206)"} />
           </div>
           <div className=" flex items-center gap-3">
             <span>Sell</span>

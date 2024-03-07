@@ -93,7 +93,7 @@ const Price = ({ coin }) => {
 
 const Chart = ({ coin }) => {
   return (
-    <section className=" flex flex-col p-5 gap-6 bg-white rounded-md aspect-[5/3]">
+    <section className=" flex flex-col p-5 gap-6 bg-white  rounded-lg aspect-[5/3]">
       <Price coin={coin} />
       <TradingViewWidget />
     </section>

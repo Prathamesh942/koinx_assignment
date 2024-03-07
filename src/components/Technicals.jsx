@@ -24,7 +24,7 @@ const Technicals = (coin) => {
   //   }, []);
   //   if (loading) return <div>Loading</div>;
   return (
-    <div className=" flex flex-col gap-5 bg-white p-5">
+    <div className=" flex flex-col gap-5 bg-white p-5  rounded-lg">
       <h2 className=" text-2xl font-semibold">About Bitcoin</h2>
       <h3 className=" font-semibold">What is bitcoin?</h3>
       <p className=" border-b pb-3 border-zinc-200">
