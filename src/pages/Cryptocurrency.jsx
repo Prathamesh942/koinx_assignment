@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Chart from "../components/Chart";
 import Performance from "../components/Performance";
 import Header from "../components/Header";
@@ -11,8 +11,19 @@ import Trending from "../components/Trending";
 import Recommended from "../components/Recommended";
 import Getstarted from "../components/Getstarted";
 import Footer from "../components/Footer";
+import { useParams } from "react-router-dom";
 
-const Cryptocurrency = ({ coin }) => {
+const Cryptocurrency = () => {
+  const { coin: currentCoin } = useParams();
+  const [coin, setCoin] = useState(currentCoin || "bitcoin");
+
+  useEffect(() => {
+    if (!currentCoin) {
+      return;
+    }
+    setCoin(currentCoin);
+  }, [currentCoin]);
+
   return (
     <div>
       <Header />

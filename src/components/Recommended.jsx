@@ -2,10 +2,21 @@ import axios from "axios";
 import "../App.css";
 import React, { useEffect, useState } from "react";
 import ChangeChip from "./ChangeChip";
+import { useNavigate } from "react-router-dom";
 
 const TrendingCard = ({ coin }) => {
+  const navigate = useNavigate();
+
+  const handleChangeCoin = (newCoin) => {
+    navigate(`/${newCoin}`);
+  };
   return (
-    <div className=" w-[100%] flex flex-col gap-2 border border-zinc-300 p-2 rounded-lg">
+    <div
+      className=" w-[100%] flex flex-col gap-2 border border-zinc-300 p-2 rounded-lg cursor-pointer"
+      onClick={() => {
+        handleChangeCoin(coin.item.id);
+      }}
+    >
       <div className=" flex gap-2 items-center">
         <img className=" w-[30px]" src={coin.item.large} alt="" />
         <span>{coin.item.symbol}</span>

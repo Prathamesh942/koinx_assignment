@@ -2,10 +2,17 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Arrow } from "../components/Chart";
 import ChangeChip from "./ChangeChip";
+import { useNavigate } from "react-router-dom";
 
 const Trending = () => {
   const [trending, setTrending] = useState();
   const [loading, setLoading] = useState(true);
+
+  const navigate = useNavigate();
+
+  const handleChangeCoin = (newCoin) => {
+    navigate(`/${newCoin}`);
+  };
   useEffect(() => {
     const fetchTrending = async () => {
       try {
@@ -32,7 +39,13 @@ const Trending = () => {
       <div className=" flex flex-col gap-2">
         {trending.slice(0, 3).map((coin, index) => {
           return (
-            <div className=" flex justify-between" key={index}>
+            <div
+              className=" flex justify-between cursor-pointer"
+              key={index}
+              onClick={() => {
+                handleChangeCoin(coin.item.id);
+              }}
+            >
               <div className=" flex gap-2 items-center">
                 <img className=" size-10" src={coin.item.large} alt="" />
                 <span>

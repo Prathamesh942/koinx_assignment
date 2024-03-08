@@ -52,6 +52,7 @@ const MarketInfo = ({ name, value }) => {
 const Performance = ({ coin }) => {
   const [fundamentals, setFundamentals] = useState();
   const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     const fetchFundamentals = async () => {
       try {
@@ -68,7 +69,7 @@ const Performance = ({ coin }) => {
       }
     };
     fetchFundamentals();
-  }, []);
+  }, [coin]);
   if (loading) return <div>Loading</div>;
   return (
     <div className=" flex flex-col bg-white gap-8 p-5 rounded-lg">
@@ -149,9 +150,9 @@ const Performance = ({ coin }) => {
           <div className=" flex flex-col flex-1 justify-between">
             <MarketInfo
               name={"Market Cap"}
-              value={fundamentals.market_data.market_cap[
+              value={fundamentals.market_data?.market_cap?.[
                 fundamentals.symbol
-              ].toLocaleString("en-US", {
+              ]?.toLocaleString("en-US", {
                 style: "currency",
                 currency: "USD",
               })}

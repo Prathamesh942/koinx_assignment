@@ -10,6 +10,7 @@ const Price = ({ coin }) => {
   const [error, setError] = useState(false);
 
   useEffect(() => {
+    setError(false);
     const fetchCoinInfo = async () => {
       try {
         setLoading(true);
@@ -17,7 +18,12 @@ const Price = ({ coin }) => {
           `https://api.coingecko.com/api/v3/search?query=${coin}`,
           { headers: { "x-cg-demo-api-key": import.meta.env.VITE_API_KEY } }
         );
+        if (response.data.coins.length == 0) {
+          setError(true);
+          return;
+        }
         setCoinInfo(response.data.coins[0]);
+
         setLoading(false);
       } catch (error) {
         setLoading(false);
@@ -41,10 +47,12 @@ const Price = ({ coin }) => {
     fetchCoinInfo();
     const intervalId = setInterval(fetchPrice, 60000);
     return () => clearInterval(intervalId);
-  }, []);
+  }, [coin]);
 
+  if (error == true) {
+    return <div>Something went wrong</div>;
+  }
   if (loading || !price || !coinInfo) return <div>Loading</div>;
-  if (error) return <div>{error}</div>;
 
   return (
     <div className=" flex flex-col gap-6">
