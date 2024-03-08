@@ -17,6 +17,9 @@ The objective of this assignment was to convert a Figma design to code using Rea
 7. Hosted the code on GitHub.
 8. Deployed the code using Vercel.
 
+## Optional Tasks Completed
+1. Made token data to be shown dynamic using coin Id as URL parameter to path
+
 ## Repository Structure
 
 - `/src`: Contains the source code for the React application.
