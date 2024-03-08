@@ -1,4 +1,5 @@
 import axios from "axios";
+import "../App.css";
 import React, { useEffect, useState } from "react";
 import ChangeChip from "./ChangeChip";
 
@@ -40,7 +41,7 @@ const Carousel = ({ coins }) => {
       {coins.map((coin) => {
         return (
           <div
-            className={` w-[25%] min-w-[250px] px-2 max-sm:min-w-[200px]`}
+            className={` w-[25%] min-w-[250px] px-2 max-sm:min-w-[200px] coins`}
             style={{ transform: `translateX(${-100 * index}%)` }}
           >
             <TrendingCard coin={coin} />
