@@ -12,6 +12,7 @@ import Recommended from "../components/Recommended";
 import Getstarted from "../components/Getstarted";
 import Footer from "../components/Footer";
 import { useParams } from "react-router-dom";
+import Accordian from "./Accordian";
 
 const Cryptocurrency = () => {
   const { coin: currentCoin } = useParams();
@@ -49,6 +50,7 @@ const Cryptocurrency = () => {
         </div>
       </div>
       <Footer />
+      <Accordian />
     </div>
   );
 };
